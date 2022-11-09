@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        span {
+            position:absolute;
+            width: 270px;
+            height: 23px;
+            background-color:  antiquewhite;
+            left: 628px;
+            border: 3px solid white;
+            padding: 10px;
+            justify-content: center;
+        
+        }
+        button {
+            width: 70px;
+            height: 55px;
+        }
+        .backg {
+            width: 100vw;
+            height: 100vh;
+            background: #6C7A89;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .numeros {
+            width: 295px;
+            height: 315px;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="backg">
+        <div class="numeros">
+            <span id="resultado"></span><br><br>
+            <button id="n7" onclick="n7()">7</button>
+            <button id="n8" onclick="n8()">8</button>
+            <button id="n9" onclick="n9()">9</button>
+            <button id="zera" onclick="zerar()">CE</button><br>
+            <button id="n4" onclick="n4()">4</button>
+            <button id="n5" onclick="n5()">5</button>
+            <button id="n6"   onclick="n6()">6</button>
+            <button id="soma" onclick="mais()">+</button><br>
+            <button id="n1" onclick="n1()">1</button>
+            <button id="n2" onclick="n2()">2</button>
+            <button id="n3" onclick="n3()">3</button>
+            <button id="menos" onclick="menos()">-</button><br>   
+            <button id="n0" onclick="n0()">0</button>
+            <button id="mul" onclick="mult()">*</button>
+            <button id="div" onclick="divi()">/</button>
+            <button id="resu" onclick="result()">=</button><br>
+            <button id="squa" onclick="square()">^</button>
+            <button id="raiz" onclick="raizz()">√</button>
+            <button id="ponto" onclick="ponto()">.</button>
+            <button id="fracao" onclick="frac()">1/x</button>
+            
+        </div>
+    </div>
+    <script>
+        let ope = "";
+        let valor = "";
+        let rest = "";
+        function n1(){
+            valor += document.querySelector('#n1').textContent;
+            resultado.innerHTML += document.querySelector('#n1').textContent;
+            
+        }
+        function n2(){
+            valor += document.querySelector('#n2').textContent;
+            resultado.innerHTML += document.querySelector('#n2').textContent;
+            
+        }
+        function n3(){
+            valor += document.querySelector('#n3').textContent;
+            resultado.innerHTML += document.querySelector('#n3').textContent;
+        }
+        function n4(){
+            valor += document.querySelector('#n4').textContent;
+            resultado.innerHTML += document.querySelector('#n4').textContent;
+            
+        }
+        function n5(){
+            valor += document.querySelector('#n5').textContent;
+            resultado.innerHTML += document.querySelector('#n5').textContent;
+            
+        }
+        function n6(){
+            valor += document.querySelector('#n6').textContent;
+            resultado.innerHTML += document.querySelector('#n6').textContent;
+            
+        }
+        function n7(){
+            valor += document.querySelector('#n7').textContent;
+            resultado.innerHTML = document.querySelector('#n7').textContent;
+            
+        }
+        function n8(){
+            valor += document.querySelector('#n8').textContent;
+            resultado.innerHTML += document.querySelector('#n8').textContent;
+            
+        }
+        function n9(){
+            valor += document.querySelector('#n9').textContent;
+            resultado.innerHTML += document.querySelector('#n9').textContent;
+            
+        }
+        function n0(){
+            valor += document.querySelector('#n0').textContent;
+            resultado.innerHTML += document.querySelector('#n0').textContent;
+        }
+        function mais(){
+            valor += document.querySelector('#soma').textContent;
+            resultado.innerHTML =  '';
+            
+        }
+        function menos(){
+            valor += document.querySelector('#menos').textContent;
+            resultado.innerHTML =  '';
+            
+        }
+        function mult(){
+            valor += document.querySelector('#mul').textContent;
+            resultado.innerHTML =  '';
+            
+        }
+        function divi(){
+            valor += document.querySelector('#div').textContent;
+            resultado.innerHTML =  '';
+            
+        }
+        function square(){
+            valor += '**2';
+            resultado.innerHTML =  '';
+            
+        }
+        function raizz(){
+            valor += '**0.5';
+            resultado.innerHTML =  '';
+            
+        }
+
+        function ponto(){
+            valor += document.querySelector('#ponto').textContent;
+            resultado.innerHTML =  '';
+        }
+        function frac(){
+            valor+='1/';
+            resultado.innerHTML =  '';
+        }
+        function zerar(){
+            valor = '';
+            resultado.innerHTML = valor;
+        }
+        function result(){
+           let resultado = document.querySelector('#resultado');
+           let resulta = eval(valor);
+           resultado.innerHTML = resulta;
+           rest = resulta;
+           valor = resulta;N
+        }
+        
+
+    </script>
+    
+    
+</body>
+</html>
